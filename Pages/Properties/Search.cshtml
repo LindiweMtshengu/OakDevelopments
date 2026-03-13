@@ -1,0 +1,54 @@
+﻿@page
+@model PropertiesSearchModel
+@{
+    ViewData["Title"] = "Property Search";
+}
+
+<main>
+    <h2>Search Properties</h2>
+
+    <form method="get">
+        <fieldset>
+            <legend>Filters</legend>
+
+            <label for="type">Type</label>
+            <select id="type" asp-for="SearchType">
+                <option value="">Any</option>
+                <option>House</option>
+                <option>Apartment</option>
+            </select>
+
+            <label for="minPrice">Min Price</label>
+            <input id="minPrice" asp-for="MinPrice" type="number" />
+
+            <label for="maxPrice">Max Price</label>
+            <input id="maxPrice" asp-for="MaxPrice" type="number" />
+
+            <label for="bedrooms">Bedrooms</label>
+            <input id="bedrooms" asp-for="Bedrooms" type="number" />
+
+            <label for="location">Location</label>
+            <input id="location" asp-for="Location" />
+        </fieldset>
+
+        <button type="submit">Search</button>
+    </form>
+
+    <section aria-labelledby="results">
+        <h3 id="results">Results</h3>
+        <div class="property-grid">
+            @foreach (var property in Model.Results)
+            {
+                <article class="property-card">
+                    <header>
+                        <h4>@property.Title</h4>
+                    </header>
+                    <p>@property.Description</p>
+                    <p><strong>Price:</strong> @property.Price</p>
+                    <p><strong>Bedrooms:</strong> @property.Bedrooms</p>
+                    <p><strong>Location:</strong> @property.Suburb, @property.City</p>
+                </article>
+            }
+        </div>
+    </section>
+</main>

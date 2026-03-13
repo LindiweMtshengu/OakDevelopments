@@ -1,32 +1,33 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Property Listings";
+    ViewData["Title"] = "Home";
 }
 
-<h1>@ViewData["Title"]</h1>
+<header>
+    <h1>Oak FDevelopments</h1>
+</header>
 
-<!-- Main Section for Listings -->
-<section id="properties" style="display:flex; flex-wrap:wrap; gap:20px;">
-
-    <!-- Property Card 1 -->
-    <section class="property-card" style="border:1px solid #ccc; border-radius:8px; padding:15px; width:300px; background:#f9f9f9;">
-        <header>
-            <h3>2-Bedroom Apartment</h3>
-        </header>
-        <p><strong>Description:</strong> Modern apartment with open-plan kitchen and balcony.</p>
-        <p><strong>Price:</strong> R1,200,000</p>
-        <p><strong>Location:</strong> Johannesburg</p>
+<main>
+    <section aria-labelledby="property-search">
+        <h2 id="property-search">Find Your Dream Property</h2>
+        <a asp-page="/Properties/Search" class="btn">Search Properties</a>
     </section>
 
-    <!-- Property Card 2 -->
-    <section class="property-card" style="border:1px solid #ccc; border-radius:8px; padding:15px; width:300px; background:#f9f9f9;">
-        <header>
-            <h3>3-Bedroom House</h3>
-        </header>
-        <p><strong>Description:</strong> Spacious family home with garden and garage.</p>
-        <p><strong>Price:</strong> R2,500,000</p>
-        <p><strong>Location:</strong> Pretoria</p>
+    <section aria-labelledby="agent-search">
+        <h2 id="agent-search">Find an Agent Near You</h2>
+        <a asp-page="/Agents/Search" class="btn">Search Agents</a>
     </section>
+</main>
 
-</section>
+<footer>
+    <nav aria-label="Footer navigation">
+        <ul>
+            <li><a asp-page="/About">About Us</a></li>
+            <li><a asp-page="/Contact">Contact</a></li>
+            <li><a asp-page="/Terms">Terms</a></li>
+            <li><a asp-page="/Privacy">Privacy</a></li>
+        </ul>
+    </nav>
+    <p>&copy; 2026 Oak FDevelopments</p>
+</footer>

@@ -1,0 +1,37 @@
+﻿@page
+@model AgentsSearchModel
+@{
+    ViewData["Title"] = "Agent Search";
+}
+
+<main>
+    <h2>Find an Agent</h2>
+
+    <form method="get">
+        <fieldset>
+            <legend>Search by Location</legend>
+            <label for="agentLocation">Location</label>
+            <input id="agentLocation" asp-for="Location" placeholder="City or Suburb" />
+        </fieldset>
+        <button type="submit">Search</button>
+    </form>
+
+    <section aria-labelledby="agent-results">
+        <h3 id="agent-results">Results</h3>
+        <ul>
+            @foreach (var agent in Model.Results)
+            {
+                <li>
+                    <article class="agent-card">
+                        <header>
+                            <h4>@agent.FirstName @agent.LastName</h4>
+                        </header>
+                        <p><strong>Email:</strong> @agent.Email</p>
+                        <p><strong>Phone:</strong> @agent.Phone</p>
+                        <p><strong>Location:</strong> @agent.Suburb, @agent.City</p>
+                    </article>
+                </li>
+            }
+        </ul>
+    </section>
+</main>

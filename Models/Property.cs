@@ -15,7 +15,8 @@
         // Foreign Keys
         public int AgentID { get; set; }
         public Agent Agent { get; set; }
-
+        public int PropertyTypeID { get; set; }
+        public PropertyType PropertyType { get; set; }
         public int StatusID { get; set; }
         public PropertyStatus Status { get; set; }
 
