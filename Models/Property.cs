@@ -5,7 +5,6 @@
         public int ID { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public string Type { get; set; }           // House, Apartment, etc.
         public decimal Price { get; set; }
         public int Bedrooms { get; set; }
         public string Suburb { get; set; }

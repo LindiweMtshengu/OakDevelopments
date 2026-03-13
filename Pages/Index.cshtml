@@ -4,30 +4,39 @@
     ViewData["Title"] = "Home";
 }
 
-<header>
-    <h1>Oak FDevelopments</h1>
-</header>
+<section class="hero">
+    <div class="hero-content">
+        <h1>Find Your Dream Home</h1>
+        <p>Browse properties, connect with agents, and discover the perfect place to live.</p>
+    </div>
+</section>
 
-<main>
-    <section aria-labelledby="property-search">
-        <h2 id="property-search">Find Your Dream Property</h2>
-        <a asp-page="/Properties/Search" class="btn">Search Properties</a>
-    </section>
+<section class="search-section">
+    <div class="search-grid">
+        <div class="search-card">
+            <h2>Search Properties</h2>
+            <form method="get" asp-page="/Properties/Search">
+                <label for="location">Location</label>
+                <input id="location" name="Location" placeholder="City or Suburb" />
 
-    <section aria-labelledby="agent-search">
-        <h2 id="agent-search">Find an Agent Near You</h2>
-        <a asp-page="/Agents/Search" class="btn">Search Agents</a>
-    </section>
-</main>
+                <label for="minPrice">Min Price</label>
+                <input id="minPrice" name="MinPrice" type="number" />
 
-<footer>
-    <nav aria-label="Footer navigation">
-        <ul>
-            <li><a asp-page="/About">About Us</a></li>
-            <li><a asp-page="/Contact">Contact</a></li>
-            <li><a asp-page="/Terms">Terms</a></li>
-            <li><a asp-page="/Privacy">Privacy</a></li>
-        </ul>
-    </nav>
-    <p>&copy; 2026 Oak FDevelopments</p>
-</footer>
+                <label for="maxPrice">Max Price</label>
+                <input id="maxPrice" name="MaxPrice" type="number" />
+
+                <button type="submit">Search Properties</button>
+            </form>
+        </div>
+
+        <div class="search-card">
+            <h2>Search Agents</h2>
+            <form method="get" asp-page="/Agents/Search">
+                <label for="agentLocation">Location</label>
+                <input id="agentLocation" name="Location" placeholder="City or Suburb" />
+
+                <button type="submit">Search Agents</button>
+            </form>
+        </div>
+    </div>
+</section>

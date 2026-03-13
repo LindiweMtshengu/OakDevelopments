@@ -30,14 +30,19 @@ namespace OakDevelopments.Pages.Properties
 
         [BindProperty(SupportsGet = true)]
         public string Location { get; set; }
+        [BindProperty(SupportsGet = true)]
+        public int? PropertyTypeID { get; set; }
+
         public List<Property> Results { get; set; } = new List<Property>();
 
         public void OnGet()
         {
             var query = _context.Properties.AsQueryable();
 
-            if (!string.IsNullOrEmpty(SearchType))
-                query = query.Where(p => p.Type == SearchType);
+            if (PropertyTypeID.HasValue)
+            {
+                query = query.Where(p => p.PropertyTypeID == PropertyTypeID.Value);
+            }
 
             if (MinPrice.HasValue)
                 query = query.Where(p => p.Price >= MinPrice.Value);
