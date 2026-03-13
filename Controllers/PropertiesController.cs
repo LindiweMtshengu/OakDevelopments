@@ -41,7 +41,7 @@ namespace OakDevelopments.Controllers
         {
             _context.Properties.Add(property);
             _context.SaveChanges();
-            return CreatedAtAction(nameof(GetProperty), new { id = property.Id }, property);
+            return CreatedAtAction(nameof(GetProperty), new { id = property.ID }, property);
         }
     }
 }
