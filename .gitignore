@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+# Build output
+bin/
+obj/
+ref/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.json.cache
+
+/.vs/OakDevelopments/v17
+/.vs/OakDevelopments
