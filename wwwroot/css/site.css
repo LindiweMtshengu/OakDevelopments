@@ -500,3 +500,7 @@ legend {
         border-radius: 10px;
     }
 
+
+.property-card footer {
+    margin-top: auto;
+}

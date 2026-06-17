@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using OakDevelopments.Data;
 using OakDevelopments.Models;
 using System.Collections.Generic;
@@ -16,10 +17,10 @@ namespace OakDevelopments.Pages.Properties
         {
             _context = context;
         }
-
-        public void OnGet()
+        public IActionResult OnGet()
         {
-            Properties = _context.Properties.ToList();
+            return RedirectToPage("/Properties/Search");
         }
+
     }
 }
