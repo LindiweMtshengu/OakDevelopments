@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lindi\\OneDrive\\Documents\\My Web Sites\\OakDevelopments\\OakDevelopments\\OakDevelopments.csproj": {}
+    "C:\\Users\\lindi\\OneDrive\\Documents\\Websites\\my-website\\ITTFA4-12\\OakDevelopments\\OakDevelopments\\OakDevelopments.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lindi\\OneDrive\\Documents\\My Web Sites\\OakDevelopments\\OakDevelopments\\OakDevelopments.csproj": {
+    "C:\\Users\\lindi\\OneDrive\\Documents\\Websites\\my-website\\ITTFA4-12\\OakDevelopments\\OakDevelopments\\OakDevelopments.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lindi\\OneDrive\\Documents\\My Web Sites\\OakDevelopments\\OakDevelopments\\OakDevelopments.csproj",
+        "projectUniqueName": "C:\\Users\\lindi\\OneDrive\\Documents\\Websites\\my-website\\ITTFA4-12\\OakDevelopments\\OakDevelopments\\OakDevelopments.csproj",
         "projectName": "OakDevelopments",
-        "projectPath": "C:\\Users\\lindi\\OneDrive\\Documents\\My Web Sites\\OakDevelopments\\OakDevelopments\\OakDevelopments.csproj",
+        "projectPath": "C:\\Users\\lindi\\OneDrive\\Documents\\Websites\\my-website\\ITTFA4-12\\OakDevelopments\\OakDevelopments\\OakDevelopments.csproj",
         "packagesPath": "C:\\Users\\lindi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lindi\\OneDrive\\Documents\\My Web Sites\\OakDevelopments\\OakDevelopments\\obj\\",
+        "outputPath": "C:\\Users\\lindi\\OneDrive\\Documents\\Websites\\my-website\\ITTFA4-12\\OakDevelopments\\OakDevelopments\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -9,41 +9,61 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = OakDevelopments
 build_property.RootNamespace = OakDevelopments
-build_property.ProjectDir = C:\Users\lindi\OneDrive\Documents\My Web Sites\OakDevelopments\OakDevelopments\
+build_property.ProjectDir = C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\lindi\OneDrive\Documents\My Web Sites\OakDevelopments\OakDevelopments
+build_property.MSBuildProjectDirectory = C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/lindi/OneDrive/Documents/My Web Sites/OakDevelopments/OakDevelopments/Pages/Error.cshtml]
+[C:/Users/lindi/OneDrive/Documents/Websites/my-website/ITTFA4-12/OakDevelopments/OakDevelopments/Pages/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lindi/OneDrive/Documents/Websites/my-website/ITTFA4-12/OakDevelopments/OakDevelopments/Pages/Agents/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWdlbnRzXFNlYXJjaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lindi/OneDrive/Documents/Websites/my-website/ITTFA4-12/OakDevelopments/OakDevelopments/Pages/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lindi/OneDrive/Documents/Websites/my-website/ITTFA4-12/OakDevelopments/OakDevelopments/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lindi/OneDrive/Documents/My Web Sites/OakDevelopments/OakDevelopments/Pages/Index.cshtml]
+[C:/Users/lindi/OneDrive/Documents/Websites/my-website/ITTFA4-12/OakDevelopments/OakDevelopments/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lindi/OneDrive/Documents/My Web Sites/OakDevelopments/OakDevelopments/Pages/Privacy.cshtml]
+[C:/Users/lindi/OneDrive/Documents/Websites/my-website/ITTFA4-12/OakDevelopments/OakDevelopments/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lindi/OneDrive/Documents/My Web Sites/OakDevelopments/OakDevelopments/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/lindi/OneDrive/Documents/Websites/my-website/ITTFA4-12/OakDevelopments/OakDevelopments/Pages/Properties/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvcGVydGllc1xTZWFyY2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lindi/OneDrive/Documents/Websites/my-website/ITTFA4-12/OakDevelopments/OakDevelopments/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lindi/OneDrive/Documents/My Web Sites/OakDevelopments/OakDevelopments/Pages/_ViewImports.cshtml]
+[C:/Users/lindi/OneDrive/Documents/Websites/my-website/ITTFA4-12/OakDevelopments/OakDevelopments/Pages/Terms.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVybXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lindi/OneDrive/Documents/Websites/my-website/ITTFA4-12/OakDevelopments/OakDevelopments/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lindi/OneDrive/Documents/My Web Sites/OakDevelopments/OakDevelopments/Pages/_ViewStart.cshtml]
+[C:/Users/lindi/OneDrive/Documents/Websites/my-website/ITTFA4-12/OakDevelopments/OakDevelopments/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lindi/OneDrive/Documents/My Web Sites/OakDevelopments/OakDevelopments/Pages/Shared/_Layout.cshtml]
+[C:/Users/lindi/OneDrive/Documents/Websites/my-website/ITTFA4-12/OakDevelopments/OakDevelopments/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-avhkfdnwcy
