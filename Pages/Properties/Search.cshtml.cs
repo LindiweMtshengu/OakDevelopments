@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 using OakDevelopments.Data;
 using OakDevelopments.Models;
 using System.Collections.Generic;
@@ -37,7 +38,7 @@ namespace OakDevelopments.Pages.Properties
 
         public void OnGet()
         {
-            var query = _context.Properties.AsQueryable();
+            var query = _context.Properties.Include(p => p.Images).AsQueryable();
 
             if (PropertyTypeID.HasValue)
             {

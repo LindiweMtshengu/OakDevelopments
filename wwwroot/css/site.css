@@ -1,71 +1,179 @@
-/* Base styles */
-.page-wrapper {
-    display: flex;
-    flex-direction: column;
-    /*min-height: 100vh;*/ /* full viewport height */
+/* ================================
+   ROOT VARIABLES (Luxury Theme)
+================================ */
+:root {
+    --primary: #1c1c1c; /* black */
+    --accent: #d4af37; /* gold */
+    --accent-dark: #b8962e;
+    --light: #f8f9fa;
 }
 
+/* ================================
+   BASE STYLES
+================================ */
 
 html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    height: auto; /* let content define height */
-    min-height: 100vh; /* ensures full screen if content is short */
-    overflow-y: auto;
 }
+
 body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Segoe UI', Arial, sans-serif;
-    margin: 0;
-    background-color: #f4f6f8;
-    color: #333;
+    background-color: var(--light);
+    color: #2c2c2c;
     line-height: 1.6;
 }
 
 
+main {
+    flex: 1;
+    padding-bottom: 60px;
+}
 
-/* Header & Navigation */
+h1, h2, h3 {
+    letter-spacing: 0.5px;
+}
+
+/* ================================
+   HEADER & NAVIGATION
+================================ */
 header {
-    background: #2c3e50;
+    background: var(--primary);
     color: white;
     padding: 1rem;
 }
 
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+
+
+.nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3rem; /* EVEN spacing */
+    flex: 1; /* takes available space */
+    width: 50%;
+}
+
+
+    .nav-links a {
+        font-size: 1.1rem; /* Bigger text */
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        padding: 5px 0;
+    }
+
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+.nav-link {
+    color: white !important;
+    font-weight: 600;
+}
+
+    .nav-link:hover {
+        color: #d4af37 !important;
+    }
+
+/* ================================
+   HERO SECTION
+================================ */
 .hero {
-    background: linear-gradient(rgba(44,62,80,0.7), rgba(44,62,80,0.7)), url('/images/hero-bg.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/images/luxury-house.jpg') center/cover no-repeat;
     color: white;
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 5rem 2rem;
 }
 
 .hero-content {
     max-width: 700px;
+    margin: auto;
 }
 
 .hero h1 {
     font-size: 3rem;
+    font-weight: bold;
     margin-bottom: 1rem;
 }
 
 .hero p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    opacity: 0.9;
 }
 
-.hero-button {
-    background: var(--accent);
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s ease, transform 0.2s ease;
+/* ================================
+   DROPDOWN MENU
+================================ */
+
+.dropdown {
+    position: relative;
 }
 
-.hero-button:hover {
-    background: var(--accent-dark);
-    transform: scale(1.05);
+/* HIDDEN BY DEFAULT */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 220px;
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    top: 120%;
+    left: 0;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.25s ease;
 }
 
+    /* ITEMS */
+    .dropdown-menu li {
+        list-style: none;
+    }
+
+        .dropdown-menu li a {
+            display: block;
+            padding: 12px 18px;
+            font-size: 1rem;
+            color: #333;
+            text-decoration: none;
+        }
+
+            .dropdown-menu li a:hover {
+                background: #f8f9fa;
+                color: var(--accent);
+            }
+
+/* SHOW DROPDOWN ON HOVER */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ================================
+   SEARCH SECTION
+================================ */
 .search-section {
     padding: 3rem 2rem;
     background: #f9f9f9;
@@ -79,18 +187,31 @@ header {
     gap: 2rem;
 }
 
-.search-card {
+
+.search-section .container {
+    max-width: 1000px;
+}
+
+
+/* ================================
+   CARDS (Search + Property + Agent)
+================================ */
+.search-card,
+.property-card,
+.agent-card {
     background: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 2rem;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border: none;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-    .search-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    .search-card:hover,
+    .property-card:hover,
+    .agent-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.15);
     }
 
     .search-card h2 {
@@ -98,49 +219,102 @@ header {
         color: var(--primary);
     }
 
-.navbar {
+.property-images {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 8px;
+    margin-bottom: 1rem;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
+.property-img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
+/* PROPERTY24 STYLE GALLERY */
+.property-gallery {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4px;
+    margin-bottom: 1rem;
+    align-items: stretch;
 }
 
-    .nav-links a {
-        color: white;
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s ease;
+/* MAIN IMAGE (BIG) */
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.main-image,
+.thumbnail-images {
+    overflow: hidden;
+    border-radius: 8px;
+    gap: 4px;
+}
+
+
+/* THUMBNAILS STACK */
+.thumbnail-images {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 4px;
+    height: 100%;
+}
+
+    .thumbnail-images img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 4px;
     }
 
-        .nav-links a:hover {
-            color: #1abc9c;
-        }
 
-/* Main container */
-.container {
-    padding: 2rem;
+.property-gallery img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
 }
 
-/* Forms */
-form fieldset {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    margin-bottom: 1rem;
+    .property-gallery img:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        opacity: 0.95;
+    }
+
+
+/* ================================
+   BUTTONS (Luxury Style)
+================================ */
+button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.7rem 1.2rem;
     border-radius: 6px;
-    background: #fff;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
 }
+
+    button:hover {
+        background: var(--accent);
+        color: black;
+    }
+
+/* ================================
+   FORMS
+================================ */
+/*form fieldset {
+    border: none;*/ /* remove harsh border */
+    /*background: white;
+    padding: 2rem;*/ /* more breathing space */
+    /*margin-bottom: 2rem;
+    border-radius: 14px;*/ /* softer corners */
+    /*box-shadow: 0 8px 25px rgba(0,0,0,0.08);*/ /* luxury shadow */
+/*}*/
 
 form label {
     display: block;
@@ -148,72 +322,114 @@ form label {
     font-weight: bold;
 }
 
-form input, form select {
+form input,
+form select {
     width: 100%;
-    padding: 0.5rem;
-    margin-top: 0.2rem;
+    padding: 0.6rem;
+    margin-top: 0.3rem;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
-button {
-    background: #3498db;
-    color: white;
-    border: none;
-    padding: 0.7rem 1.2rem;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 1rem;
-    transition: background 0.3s ease;
-}
+/*
+legend {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--primary);
+*/}
 
-    button:hover {
-        background: #2980b9;
-    }
 
-/* Property & Agent Cards */
+/* ================================
+   PROPERTY GRID
+================================ */
 .property-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1.5rem;
 }
 
-.property-card, .agent-card {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1rem;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-    .property-card:hover, .agent-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-
-    .property-card header, .agent-card header {
-        margin-bottom: 0.5rem;
-    }
+/* ================================
+   RESPONSIVENESS
+================================ */
 
 @media (max-width: 768px) {
+
+    /* NAVIGATION FIX */
     .nav-links {
         flex-direction: column;
-        gap: 0.5rem;
+        align-items: center; /* centers items */
+        gap: 1rem;
+        margin-top: 1rem;
     }
 
+    /* PROPERTY GRID */
     .property-grid {
         grid-template-columns: 1fr;
+        padding: 0 1rem; /* adds spacing on sides */
     }
+
+    /* SEARCH SECTION */
+    .search-section .row {
+        flex-direction: column;
+    }
+
+    /* CARDS FULL WIDTH */
+    .col-md-6 {
+        width: 100%;
+    }
+
+    /*.property-gallery {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 12px;*/ /* slightly bigger gap */
+        /*margin-bottom: 1.5rem;
+    }*/
+
+
+    .thumbnail-images {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: none;
+    }
+
 }
 
-/* Footer */
-/*footer {
-    background: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-    position: relative;
-}*/
+/* ================================
+   FILTER BAR (COMPACT LUXURY)
+================================ */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-end;
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    margin-bottom: 2rem;
+}
+
+.filter-item {
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
+}
+
+    .filter-item label {
+        font-size: 0.8rem;
+        color: #777;
+        margin-bottom: 0.2rem;
+    }
+
+    .filter-item input,
+    .filter-item select {
+        padding: 0.4rem;
+        border-radius: 6px;
+        border: 1px solid #ddd;
+    }
+
+.filter-button button {
+    height: 38px;
+    padding: 0 1.2rem;
+}
 

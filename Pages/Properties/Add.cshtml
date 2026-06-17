@@ -1,0 +1,49 @@
+﻿@page
+@model OakDevelopments.Pages.Properties.AddModel
+
+@{
+    ViewData["Title"] = "Add Property";
+}
+
+<h2>Add New Property</h2>
+
+<form method="post">
+
+    <div>
+        <label>Title</label>
+        <input asp-for="Property.Title" />
+    </div>
+
+    <div>
+        <label>Description</label>
+        <textarea asp-for="Property.Description"></textarea>
+    </div>
+
+    <div>
+        <label>Price</label>
+        <input asp-for="Property.Price" type="number" />
+    </div>
+
+    <div>
+        <label>Bedrooms</label>
+        <input asp-for="Property.Bedrooms" type="number" />
+    </div>
+
+    <div>
+        <label>Suburb</label>
+        <input asp-for="Property.Suburb" />
+    </div>
+
+    <div>
+        <label>City</label>
+        <input asp-for="Property.City" />
+    </div>
+
+    <div>
+        <label>Province</label>
+        <input asp-for="Property.Province" />
+    </div>
+
+    <button type="submit">Add Property</button>
+
+</form>

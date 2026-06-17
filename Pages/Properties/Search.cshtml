@@ -4,51 +4,127 @@
     ViewData["Title"] = "Property Search";
 }
 
-<main>
-    <h2>Search Properties</h2>
+<main class="container">
 
-    <form method="get">
-        <fieldset>
-            <legend>Filters</legend>
+    <!-- PAGE HEADER -->
+    <header>
+        <h2>Search Properties</h2>
+    </header>
 
-            <label for="type">Type</label>
-            <select id="type" asp-for="SearchType">
-                <option value="">Any</option>
-                <option>House</option>
-                <option>Apartment</option>
-            </select>
+    <!-- FILTER SECTION -->
+    <section aria-labelledby="filters">
+        <header>
+            <h3 id="filters">Filters</h3>
+        </header>
 
-            <label for="minPrice">Min Price</label>
-            <input id="minPrice" asp-for="MinPrice" type="number" />
+        <form method="get" class="filter-bar">
 
-            <label for="maxPrice">Max Price</label>
-            <input id="maxPrice" asp-for="MaxPrice" type="number" />
+            <div class="filter-item">
+                <label for="type">Type</label>
+                <select id="type" asp-for="SearchType">
+                    <option value="">Any</option>
+                    <option>House</option>
+                    <option>Apartment</option>
+                </select>
+            </div>
 
-            <label for="bedrooms">Bedrooms</label>
-            <input id="bedrooms" asp-for="Bedrooms" type="number" />
+            <div class="filter-item">
+                <label for="minPrice">Min Price</label>
+                <input id="minPrice" asp-for="MinPrice" type="number" />
+            </div>
 
-            <label for="location">Location</label>
-            <input id="location" asp-for="Location" />
-        </fieldset>
+            <div class="filter-item">
+                <label for="maxPrice">Max Price</label>
+                <input id="maxPrice" asp-for="MaxPrice" type="number" />
+            </div>
 
-        <button type="submit">Search</button>
-    </form>
+            <div class="filter-item">
+                <label for="bedrooms">Bedrooms</label>
+                <input id="bedrooms" asp-for="Bedrooms" type="number" />
+            </div>
 
-    <section aria-labelledby="results">
-        <h3 id="results">Results</h3>
-        <div class="property-grid">
-            @foreach (var property in Model.Results)
-            {
-                <article class="property-card">
-                    <header>
-                        <h4>@property.Title</h4>
-                    </header>
-                    <p>@property.Description</p>
-                    <p><strong>Price:</strong> @property.Price</p>
-                    <p><strong>Bedrooms:</strong> @property.Bedrooms</p>
-                    <p><strong>Location:</strong> @property.Suburb, @property.City</p>
-                </article>
-            }
-        </div>
+            <div class="filter-item">
+                <label for="location">Location</label>
+                <input id="location" asp-for="Location" />
+            </div>
+
+            <div class="filter-button">
+                <button type="submit">Search</button>
+            </div>
+
+        </form>
     </section>
+
+    <!-- RESULTS SECTION -->
+    <section aria-labelledby="results">
+
+        <header>
+            <h3 id="results">Results</h3>
+        </header>
+
+        <!-- RESULT SUMMARY -->
+        <p class="results-summary">
+            @if (!string.IsNullOrEmpty(Model.Location))
+            {
+                <span>Showing properties in <strong>@Model.Location</strong></span>
+            }
+        </p>
+
+        <!-- GRID -->
+        <section class="property-grid">
+
+            @if (Model.Results != null && Model.Results.Any())
+            {
+                foreach (var property in Model.Results)
+                {
+                    <article class="property-card">
+
+
+                        @if (property.Images != null && property.Images.Any())
+                        {
+                            <div class="property-gallery">
+
+                                <!-- MAIN IMAGE -->
+                                <div class="main-image">
+                                    <img src="@property.Images.First().ImagePath" alt="Main image" />
+                                </div>
+
+                                <!-- THUMBNAILS -->
+                                <div class="thumbnail-images">
+                                    @foreach (var img in property.Images.Skip(1).Take(3))
+                                    {
+                                        <img src="@img.ImagePath" alt="Thumbnail" />
+                                    }
+                                </div>
+
+                            </div>
+                        }
+
+
+                        <header>
+                            <h4>@property.Title</h4>
+                        </header>
+
+                        <p>@property.Description</p>
+
+                        <p><strong>Price:</strong> R @property.Price</p>
+
+                        <p><strong>Bedrooms:</strong> @property.Bedrooms</p>
+
+                        <p>
+                            <strong>Location:</strong>
+                            @property.Suburb, @property.City
+                        </p>
+                    </article>
+                }
+            }
+            else
+            {
+                <p>No properties found for your search.</p>
+            }
+
+        </section>
+
+    </section>
+
 </main>

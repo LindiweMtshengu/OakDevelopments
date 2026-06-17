@@ -11,6 +11,8 @@
         public string City { get; set; }
         public string Province { get; set; }
 
+
+
         // Foreign Keys
         public int AgentID { get; set; }
         public Agent Agent { get; set; }
@@ -20,7 +22,7 @@
         public PropertyStatus Status { get; set; }
 
         // Navigation
-        public ICollection<PropertyImage> Images { get; set; }
+        public List<PropertyImage> Images { get; set; }
 
     }
 }
