@@ -79,17 +79,14 @@
                 {
                     <article class="property-card">
 
-
                         @if (property.Images != null && property.Images.Any())
                         {
                             <div class="property-gallery">
 
-                                <!-- MAIN IMAGE -->
                                 <div class="main-image">
                                     <img src="@property.Images.First().ImagePath" alt="Main image" />
                                 </div>
 
-                                <!-- THUMBNAILS -->
                                 <div class="thumbnail-images">
                                     @foreach (var img in property.Images.Skip(1).Take(3))
                                     {
@@ -100,23 +97,37 @@
                             </div>
                         }
 
+                        <!-- ONLY wrap TEXT in link -->
+                        <a asp-page="/Properties/Details" asp-route-id="@property.ID" style="text-decoration:none; color:inherit;">
 
-                        <header>
-                            <h4>@property.Title</h4>
-                        </header>
+                            <header>
+                                <h4>@property.Title</h4>
+                            </header>
 
-                        <p>@property.Description</p>
+                            <p>@property.Description</p>
+                            <p><strong>Price:</strong> R @property.Price</p>
+                            <p><strong>Bedrooms:</strong> @property.Bedrooms</p>
+                            <p><strong>Location:</strong> @property.Suburb, @property.City</p>
 
-                        <p><strong>Price:</strong> R @property.Price</p>
+                        </a>
 
-                        <p><strong>Bedrooms:</strong> @property.Bedrooms</p>
-
-                        <p>
-                            <strong>Location:</strong>
-                            @property.Suburb, @property.City
-                        </p>
                     </article>
                 }
+
+                <!-- FULLSCREEN IMAGE VIEWER -->
+
+
+                <div id="imageModal" class="image-modal">
+
+                    <span class="close-btn">&times;</span>
+
+                    <div id="modalScroll" class="modal-content" onclick="event.stopPropagation()">
+                    </div>
+
+                </div>
+
+
+
             }
             else
             {

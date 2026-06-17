@@ -1,0 +1,51 @@
+﻿@page "{id:int}"
+@model DetailsModel
+
+<main class="container">
+
+    <h2>@Model.Property.Title</h2>
+
+
+    @if (Model.Property.Images != null && Model.Property.Images.Any())
+    {
+        <div class="property-gallery details-gallery">
+
+            <!-- MAIN IMAGE -->
+            <div class="main-image">
+                <img src="@Model.Property.Images.First().ImagePath" />
+            </div>
+
+            <!-- THUMBNAILS -->
+            <div class="thumbnail-images">
+                @foreach (var img in Model.Property.Images.Skip(1))
+                {
+                    <img src="@img.ImagePath" />
+                }
+            </div>
+
+        </div>
+    }
+
+
+    <!-- DETAILS -->
+    <p><strong>Price:</strong> R @Model.Property.Price</p>
+
+    <p><strong>Bedrooms:</strong> @Model.Property.Bedrooms</p>
+
+    <p><strong>Location:</strong> @Model.Property.Suburb, @Model.Property.City</p>
+
+    <p>@Model.Property.Description</p>
+
+
+    <!-- FULLSCREEN IMAGE MODAL -->
+    <div id="imageModal" class="image-modal">
+
+        <span class="close-btn">&times;</span>
+
+        <div id="modalScroll" class="modal-content" onclick="event.stopPropagation()">
+            <!-- Images injected here -->
+        </div>
+
+    </div>
+
+</main>
