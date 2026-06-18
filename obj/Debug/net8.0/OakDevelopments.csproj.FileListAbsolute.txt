@@ -145,20 +145,9 @@ C:\Users\lindi\OneDrive\Documents\My Web Sites\OakDevelopments\OakDevelopments\b
 C:\Users\lindi\OneDrive\Documents\My Web Sites\OakDevelopments\OakDevelopments\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\lindi\OneDrive\Documents\My Web Sites\OakDevelopments\OakDevelopments\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\lindi\OneDrive\Documents\My Web Sites\OakDevelopments\OakDevelopments\obj\Debug\net8.0\OakDevelopments.sourcelink.json
-C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\obj\Debug\net8.0\OakDevelopments.csproj.AssemblyReference.cache
-C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\obj\Debug\net8.0\rpswa.dswa.cache.json
-C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\obj\Debug\net8.0\OakDevelopments.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\obj\Debug\net8.0\OakDevelopments.AssemblyInfoInputs.cache
-C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\obj\Debug\net8.0\OakDevelopments.AssemblyInfo.cs
-C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\obj\Debug\net8.0\OakDevelopments.csproj.CoreCompileInputs.cache
-C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\obj\Debug\net8.0\OakDevelopments.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\obj\Debug\net8.0\OakDevelopments.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\obj\Debug\net8.0\OakDevelopments.RazorAssemblyInfo.cache
-C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\obj\Debug\net8.0\OakDevelopments.RazorAssemblyInfo.cs
-C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\obj\Debug\net8.0\OakDevelopments.sourcelink.json
-C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\bin\Debug\net8.0\OakDevelopments.staticwebassets.runtime.json
 C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\bin\Debug\net8.0\appsettings.json
+C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\bin\Debug\net8.0\OakDevelopments.staticwebassets.runtime.json
 C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\bin\Debug\net8.0\OakDevelopments.staticwebassets.endpoints.json
 C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\bin\Debug\net8.0\OakDevelopments.exe
 C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\bin\Debug\net8.0\OakDevelopments.deps.json
@@ -234,9 +223,11 @@ C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\
 C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\bin\Debug\net8.0\NuGet.ProjectModel.dll
 C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\bin\Debug\net8.0\NuGet.Protocol.dll
 C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\bin\Debug\net8.0\NuGet.Versioning.dll
+C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\bin\Debug\net8.0\SendGrid.dll
 C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\bin\Debug\net8.0\SQLitePCLRaw.batteries_v2.dll
 C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\bin\Debug\net8.0\SQLitePCLRaw.core.dll
 C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\bin\Debug\net8.0\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\bin\Debug\net8.0\StarkbankEcdsa.dll
 C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\bin\Debug\net8.0\System.ClientModel.dll
 C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\bin\Debug\net8.0\System.CodeDom.dll
 C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\bin\Debug\net8.0\System.Composition.AttributedModel.dll
@@ -416,6 +407,17 @@ C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\
 C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\obj\Debug\net8.0\OakDevelopments.csproj.AssemblyReference.cache
+C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\obj\Debug\net8.0\OakDevelopments.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\obj\Debug\net8.0\OakDevelopments.AssemblyInfoInputs.cache
+C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\obj\Debug\net8.0\OakDevelopments.AssemblyInfo.cs
+C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\obj\Debug\net8.0\OakDevelopments.csproj.CoreCompileInputs.cache
+C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\obj\Debug\net8.0\OakDevelopments.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\obj\Debug\net8.0\OakDevelopments.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\obj\Debug\net8.0\OakDevelopments.RazorAssemblyInfo.cache
+C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\obj\Debug\net8.0\OakDevelopments.RazorAssemblyInfo.cs
+C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\obj\Debug\net8.0\OakDevelopments.sourcelink.json
 C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\obj\Debug\net8.0\rjimswa.dswa.cache.json
 C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 C:\Users\lindi\OneDrive\Documents\Websites\my-website\ITTFA4-12\OakDevelopments\OakDevelopments\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
