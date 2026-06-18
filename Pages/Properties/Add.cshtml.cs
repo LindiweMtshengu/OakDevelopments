@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using OakDevelopments.Data;
@@ -15,21 +16,64 @@ namespace OakDevelopments.Pages.Properties
         }
 
         [BindProperty]
-        public Property ? Property { get; set; }
+        public Property Property { get; set; } = new Property();
+
+        [BindProperty]
+        public List<IFormFile> Images { get; set; }
 
         public void OnGet()
         {
         }
 
-        public IActionResult OnPost()
+        public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid || Property == null)
+            if (!ModelState.IsValid)
             {
                 return Page();
             }
 
+            // AUTO ASSIGN REQUIRED FIELDS 
+            Property.AgentID = 1;
+            Property.PropertyTypeID = 1;
+            Property.StatusID = 1;
+
+            // Validate images
+            if (Images == null || Images.Count < 4)
+            {
+                ModelState.AddModelError("", "Please upload at least 4 images.");
+                return Page();
+            }
+
+            // Save property
             _context.Properties.Add(Property);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
+
+            // Save images
+            foreach (var file in Images)
+            {
+                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+
+                var filePath = Path.Combine(
+                    Directory.GetCurrentDirectory(),
+                    "wwwroot/images",
+                    fileName
+                );
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await file.CopyToAsync(stream);
+                }
+
+                var image = new PropertyImage
+                {
+                    ImagePath = "/images/" + fileName,
+                    PropertyID = Property.ID
+                };
+
+                _context.PropertyImages.Add(image);
+            }
+
+            await _context.SaveChangesAsync();
 
             return RedirectToPage("/Properties/Index");
         }

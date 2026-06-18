@@ -5,45 +5,161 @@
     ViewData["Title"] = "Add Property";
 }
 
-<h2>Add New Property</h2>
+<main>
+    <section>
 
-<form method="post">
+        <h2>Add New Property</h2>
 
-    <div>
-        <label>Title</label>
-        <input asp-for="Property.Title" />
-    </div>
+        <!-- VALIDATION SUMMARY -->
+        <div asp-validation-summary="All" class="text-danger"></div>
 
-    <div>
-        <label>Description</label>
-        <textarea asp-for="Property.Description"></textarea>
-    </div>
+        <form method="post" enctype="multipart/form-data" id="propertyForm">
 
-    <div>
-        <label>Price</label>
-        <input asp-for="Property.Price" type="number" />
-    </div>
+            <!-- PROPERTY DETAILS -->
+            <fieldset>
+                <legend>Property Details</legend>
 
-    <div>
-        <label>Bedrooms</label>
-        <input asp-for="Property.Bedrooms" type="number" />
-    </div>
+                <div>
+                    <label asp-for="Property.Title"></label>
+                    <input asp-for="Property.Title" class="form-control" />
+                    <span asp-validation-for="Property.Title" class="text-danger"></span>
+                </div>
 
-    <div>
-        <label>Suburb</label>
-        <input asp-for="Property.Suburb" />
-    </div>
+                <div>
+                    <label asp-for="Property.Description"></label>
+                    <textarea asp-for="Property.Description" class="form-control"></textarea>
+                    <span asp-validation-for="Property.Description" class="text-danger"></span>
+                </div>
 
-    <div>
-        <label>City</label>
-        <input asp-for="Property.City" />
-    </div>
+                <div>
+                    <label asp-for="Property.Price"></label>
+                    <input asp-for="Property.Price" type="number" class="form-control" />
+                    <span asp-validation-for="Property.Price" class="text-danger"></span>
+                </div>
 
-    <div>
-        <label>Province</label>
-        <input asp-for="Property.Province" />
-    </div>
+                <div>
+                    <label asp-for="Property.Bedrooms"></label>
+                    <input asp-for="Property.Bedrooms" type="number" class="form-control" />
+                    <span asp-validation-for="Property.Bedrooms" class="text-danger"></span>
+                </div>
 
-    <button type="submit">Add Property</button>
+                <div>
+                    <label asp-for="Property.Suburb"></label>
+                    <input asp-for="Property.Suburb" class="form-control" />
+                    <span asp-validation-for="Property.Suburb" class="text-danger"></span>
+                </div>
 
-</form>
+                <div>
+                    <label asp-for="Property.City"></label>
+                    <input asp-for="Property.City" class="form-control" />
+                    <span asp-validation-for="Property.City" class="text-danger"></span>
+                </div>
+
+                <div>
+                    <label asp-for="Property.Province"></label>
+                    <input asp-for="Property.Province" class="form-control" />
+                    <span asp-validation-for="Property.Province" class="text-danger"></span>
+                </div>
+            </fieldset>
+
+            <!-- IMAGE UPLOAD -->
+            <fieldset>
+                <legend>Property Images</legend>
+
+                <label>Select Images (Add one by one)</label>
+                <input type="file" id="imageInput" class="form-control" />
+
+                <small>Add images one by one (minimum 4)</small>
+
+                <!-- hidden file inputs go here -->
+                <div id="fileInputs"></div>
+
+                <!-- preview -->
+                <div id="imagePreview" style="margin-top:10px;"></div>
+            </fieldset>
+
+            <button type="submit" class="btn btn-dark mt-3">
+                Add Property
+            </button>
+
+        </form>
+
+    </section>
+</main>
+
+@section Scripts {
+
+    <!-- CLIENT-SIDE VALIDATION -->
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+
+        const input = document.getElementById("imageInput");
+        const preview = document.getElementById("imagePreview");
+        const fileInputsContainer = document.getElementById("fileInputs");
+
+        input.addEventListener("change", function () {
+
+            const file = this.files[0];
+            if (!file) return;
+
+            // create hidden input per file
+            const newInput = document.createElement("input");
+            newInput.type = "file";
+            newInput.name = "Images";
+            newInput.style.display = "none";
+
+            const dataTransfer = new DataTransfer();
+            dataTransfer.items.add(file);
+            newInput.files = dataTransfer.files;
+
+            fileInputsContainer.appendChild(newInput);
+
+            // preview image
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+
+                const container = document.createElement("div");
+                container.style.display = "inline-block";
+                container.style.margin = "5px";
+
+                const img = document.createElement("img");
+                img.src = e.target.result;
+                img.style.width = "120px";
+                img.style.borderRadius = "6px";
+
+                const removeBtn = document.createElement("button");
+                removeBtn.innerText = "Remove";
+                removeBtn.type = "button";
+                removeBtn.style.display = "block";
+
+                removeBtn.onclick = function () {
+                    fileInputsContainer.removeChild(newInput);
+                    preview.removeChild(container);
+                };
+
+                container.appendChild(img);
+                container.appendChild(removeBtn);
+                preview.appendChild(container);
+            };
+
+            reader.readAsDataURL(file);
+
+            // clear input so user can add same file again if needed
+            this.value = "";
+        });
+
+        document.getElementById("propertyForm").addEventListener("submit", function (e) {
+
+            const totalFiles =
+                fileInputsContainer.querySelectorAll("input[name='Images']").length;
+
+            if (totalFiles < 4) {
+                e.preventDefault();
+                alert("Please upload at least 4 images.");
+            }
+        });
+
+    </script>
+}
