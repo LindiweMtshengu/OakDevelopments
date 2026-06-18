@@ -28,7 +28,15 @@
 
 
     <!-- DETAILS -->
-    <p><strong>Price:</strong> R @Model.Property.Price</p>
+
+    <p class="price-row">
+        <span class="price-label">Price</span>
+
+        <span class="price">
+            R @Model.Property.Price.ToString("N0").Replace(",", " ")
+        </span>
+
+    </p>
 
     <p><strong>Bedrooms:</strong> @Model.Property.Bedrooms</p>
 

@@ -43,19 +43,32 @@ h1, h2, h3 {
 header {
     background: var(--primary);
     color: white;
-    padding: 1.5rem;
+    padding: 1.2rem;
 }
 
 
 .navbar {
     background-color: #121212 !important;
-    padding: 0 2rem;
+    padding: 15px 16px;
 }
 
 .navbar-nav .nav-item {
     margin: 0 10px;
 }
 
+
+.navbar-toggler {
+    border-color: white;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1); /* makes icon white */
+}
+
+.navbar-collapse {
+    background-color: #121212;
+    padding: 10px;
+}
 
 
 .navbar-brand {
@@ -207,6 +220,29 @@ header {
 /* ================================
    CARDS (Search + Property + Agent)
 ================================ */
+
+.price-row {
+    margin: 10px 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.price-label {
+    display: block;
+    font-size: 0.75rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.price {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #d4af37;
+    margin-top: 2px;
+}
+
 .search-card,
 .property-card,
 .agent-card {
@@ -229,6 +265,13 @@ header {
         margin-bottom: 1rem;
         color: var(--primary);
     }
+
+    /* PRICE STYLING */
+    .property-card p strong {
+        color: #d4af37; /* luxury gold */
+        font-size: 1.1rem;
+    }
+
 
 .property-images {
     display: flex;
@@ -367,6 +410,11 @@ legend {
 
 @media (max-width: 768px) {
 
+    .navbar-brand {
+        font-size: 1.3rem !important; /* smaller logo */
+        margin-left: 10px;
+    }
+
     /* NAVIGATION FIX */
     .nav-links {
         flex-direction: column;
@@ -398,6 +446,15 @@ legend {
         /*margin-bottom: 1.5rem;
     }*/
 
+
+    .thumbnail-images {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: none;
+    }
+
+    .property-gallery {
+        grid-template-columns: 1fr; /* stack */
+    }
 
     .thumbnail-images {
         grid-template-columns: repeat(3, 1fr);
