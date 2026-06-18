@@ -3,71 +3,139 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>@ViewData["Title"] - OakDevelopments</title>
 
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Site CSS -->
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/OakDevelopments.styles.css" asp-append-version="true" />
+
+    <!-- Custom Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== GLOBAL STYLING ===== */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fb;
+            color: #1a1a1a;
+        }
+
+        h1, h2, h3, .navbar-brand {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            background-color: #ffffff;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            margin-right: 10px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #d4af37;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background-color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* ===== MOBILE IMPROVEMENTS ===== */
+        @@media (max-width: 768px) {
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- HEADER + NAVIGATION -->
+    <!-- ===== HEADER ===== -->
     <header>
-        <nav class="border-bottom shadow-sm" aria-label="Main navigation">
-            <div class="container d-flex align-items-center justify-content-between">
+        <nav class="navbar navbar-expand-lg navbar-light border-bottom shadow-sm">
+            <div class="container-fluid px-4">
 
                 <!-- LOGO -->
                 <a class="navbar-brand fw-bold" asp-page="/Index">
                     <span style="color:#d4af37;">OakDevelopments</span>
                 </a>
 
-                <!-- NAV LIST -->
-                <ul class="nav-links mx-auto" role="menubar">
+                <!-- MOBILE TOGGLE -->
+                <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                    <li>
-                        <a asp-page="/Index" class="nav-link">Home</a>
-                    </li>
+                <!-- NAV CONTENT -->
+                <div class="collapse navbar-collapse" id="mainNav">
 
-                    <li>
-                        <a asp-page="/Properties/Index" class="nav-link">Properties</a>
-                    </li>
+                    <ul class="navbar-nav mx-auto">
 
-                    <!-- ADMIN DROPDOWN -->
-                    <li class="dropdown position-relative">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-page="/Index">Home</a>
+                        </li>
 
-                        <a href="#" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
-                            Admin
-                        </a>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-page="/Properties/Index">Properties</a>
+                        </li>
 
-                        <ul class="dropdown-menu" role="menu" aria-label="Admin menu">
-                            <li><a asp-page="/Properties/Add">Add Property</a></li>
-                            <li><a asp-page="/Properties/Index">Manage Properties</a></li>
-                        </ul>
-                    </li>
+                        <!-- DROPDOWN -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                Admin
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" asp-page="/Properties/Add">Add Property</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-page="/Properties/Index">Manage Properties</a>
+                                </li>
+                            </ul>
+                        </li>
 
-                    <li>
-                        <a asp-page="/Privacy" class="nav-link">Privacy</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-page="/Privacy">Privacy</a>
+                        </li>
 
-                </ul>
+                    </ul>
 
-                <partial name="_LoginPartial" />
+                    <!-- LOGIN -->
+                    <div class="ms-auto">
+                        <partial name="_LoginPartial" />
+                    </div>
 
+                </div>
             </div>
         </nav>
     </header>
 
-    <!-- MAIN CONTENT -->
-    <main class="container pb-3" role="main">
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="container py-4">
         @RenderBody()
     </main>
 
-    <!-- FOOTER -->
-    <footer class="footer border-top text-muted mt-4">
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer border-top mt-5">
         <div class="container">
             <p>
-                &copy; 2026 - OakDevelopments -
+                &copy; 2026 - OakDevelopments |
                 <a asp-page="/Privacy">Privacy</a>
             </p>
         </div>

@@ -4,6 +4,7 @@
     const modalScroll = document.getElementById("modalScroll");
     const closeBtn = document.querySelector(".close-btn");
 
+    // ===== OPEN MODAL =====
     document.querySelectorAll(".details-gallery img").forEach(img => {
 
         img.addEventListener("click", function () {
@@ -20,20 +21,31 @@
                 fullImg.src = i.src;
                 modalScroll.appendChild(fullImg);
             });
-
         });
 
     });
 
-    closeBtn.addEventListener("click", () => {
-        modal.style.display = "none";
-    });
-
-
-    modal.addEventListener("click", function (e) {
-        if (e.target === modal) {
+    // ===== CLOSE BUTTON =====
+    if (closeBtn) {
+        closeBtn.addEventListener("click", () => {
             modal.style.display = "none";
-        }
-    });
+        });
+    }
+
+    // ===== CLICK OUTSIDE TO CLOSE =====
+    if (modal) {
+        modal.addEventListener("click", function (e) {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    }
+
+    // ===== PREVENT MODAL CONTENT CLICK FROM CLOSING =====
+    if (modalScroll) {
+        modalScroll.addEventListener("click", function (e) {
+            e.stopPropagation();
+        });
+    }
 
 });

@@ -43,23 +43,27 @@ h1, h2, h3 {
 header {
     background: var(--primary);
     color: white;
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #121212 !important;
     padding: 0 2rem;
 }
 
+.navbar-nav .nav-item {
+    margin: 0 10px;
+}
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--accent);
-    text-decoration: none;
+
+
+.navbar-brand {
+    font-size: 3rem !important; /* increase size */
+    font-weight: 900;
+    color: #d4af37 !important; /* keep luxury gold */
+    letter-spacing: 1px;
+    margin-left: 40px;
 }
 
 
@@ -87,8 +91,10 @@ header {
         }
 
 .nav-link {
+    font-size: 1.4rem !important;
     color: white !important;
-    font-weight: 600;
+    align-items: center;
+    font-weight: 300;
 }
 
     .nav-link:hover {
@@ -98,12 +104,17 @@ header {
 /* ================================
    HERO SECTION
 ================================ */
+
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/images/luxury-house.jpg') center/cover no-repeat;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('/images/luxury-house.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     color: white;
     text-align: center;
     padding: 5rem 2rem;
 }
+
 
 .hero-content {
     max-width: 700px;
@@ -338,7 +349,7 @@ legend {
     font-weight: 600;
     margin-bottom: 1rem;
     color: var(--primary);
-*/}
+*/
 
 
 /* ================================

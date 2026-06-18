@@ -15,7 +15,7 @@ namespace OakDevelopments.Pages.Properties
         }
 
         [BindProperty]
-        public Property Property { get; set; }
+        public Property ? Property { get; set; }
 
         public void OnGet()
         {
@@ -23,7 +23,7 @@ namespace OakDevelopments.Pages.Properties
 
         public IActionResult OnPost()
         {
-            if (!ModelState.IsValid)
+            if (!ModelState.IsValid || Property == null)
             {
                 return Page();
             }

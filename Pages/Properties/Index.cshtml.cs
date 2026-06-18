@@ -11,7 +11,7 @@ namespace OakDevelopments.Pages.Properties
     {
         private readonly AppDbContext _context;
 
-        public List<Property> Properties { get; set; }
+        public List<Property>?  Properties { get; set; }
 
         public IndexModel(AppDbContext context)
         {

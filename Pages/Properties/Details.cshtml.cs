@@ -14,7 +14,7 @@ public class DetailsModel : PageModel
         _context = context;
     }
 
-    public Property Property { get; set; }
+    public Property ? Property { get; set; }
 
     public void OnGet(int id)
     {

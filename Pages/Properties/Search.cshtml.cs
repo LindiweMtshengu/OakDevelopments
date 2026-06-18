@@ -5,6 +5,7 @@ using OakDevelopments.Data;
 using OakDevelopments.Models;
 using System.Collections.Generic;
 using System.Linq;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace OakDevelopments.Pages.Properties
 {
@@ -18,7 +19,7 @@ namespace OakDevelopments.Pages.Properties
         }
 
         [BindProperty(SupportsGet = true)]
-        public string SearchType { get; set; }
+        public string? SearchType { get; set; }
 
         [BindProperty(SupportsGet = true)]
         public decimal? MinPrice { get; set; }
@@ -30,7 +31,7 @@ namespace OakDevelopments.Pages.Properties
         public int? Bedrooms { get; set; }
 
         [BindProperty(SupportsGet = true)]
-        public string Location { get; set; }
+        public string? Location { get; set; }
         [BindProperty(SupportsGet = true)]
         public int? PropertyTypeID { get; set; }
 
@@ -55,7 +56,12 @@ namespace OakDevelopments.Pages.Properties
                 query = query.Where(p => p.Bedrooms == Bedrooms.Value);
 
             if (!string.IsNullOrEmpty(Location))
-                query = query.Where(p => p.City.Contains(Location) || p.Suburb.Contains(Location));
+
+                query = query.Where(p =>
+                        (p.City != null && p.City.Contains(Location)) ||
+                        (p.Suburb != null && p.Suburb.Contains(Location))
+                    );
+
 
             Results = query.ToList();
         }

@@ -17,7 +17,7 @@ namespace OakDevelopments.Pages.Agents
         }
 
         [BindProperty(SupportsGet = true)]
-        public string Location { get; set; }
+        public string ? Location { get; set; }
 
         public List<Agent> Results { get; set; } = new List<Agent>();
 
@@ -27,7 +27,12 @@ namespace OakDevelopments.Pages.Agents
 
             if (!string.IsNullOrEmpty(Location))
             {
-                query = query.Where(a => a.City.Contains(Location) || a.Suburb.Contains(Location));
+
+                query = query.Where(a =>
+                        (a.City != null && a.City.Contains(Location)) ||
+                        (a.Suburb != null && a.Suburb.Contains(Location))
+                    );
+
             }
 
             Results = query.ToList();
