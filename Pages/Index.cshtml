@@ -6,7 +6,7 @@
 
 <main>
 
-    <!-- HERO FIRST -->
+    <!-- HERO -->
     <section class="hero text-center text-white">
         <div class="hero-content">
             <h1>Find Your Dream Home</h1>
@@ -15,25 +15,20 @@
     </section>
 
     <!-- SEARCH -->
-    <section class="search-section mt-5" aria-labelledby="search-heading">
+    <section class="search-section py-5" aria-labelledby="search-heading">
         <div class="container">
 
-            <header>
-                <h2 id="search-heading" class="mb-4 text-center">
-                    Search
-                </h2>
-            </header>
+            <h2 id="search-heading" class="mb-5 text-center">Search</h2>
 
-            <div class="row">
+            <div class="row g-4">
 
                 <!-- PROPERTY SEARCH -->
-                <section class="col-12 col-md-6">
-                    <article class="card p-4 shadow">
+                <div class="col-12 col-md-6">
+                    <div class="card p-4 shadow-sm h-100">
 
-                        <h3 class="mb-3">Search Properties</h3>
+                        <h4 class="mb-3">Search Properties</h4>
 
                         <form method="get" asp-page="/Properties/Search">
-
                             <div class="mb-3">
                                 <label>Location</label>
                                 <input class="form-control" name="Location" placeholder="City or Suburb" />
@@ -49,117 +44,162 @@
                                 <input class="form-control" name="MaxPrice" type="number" />
                             </div>
 
-                            <button class="btn btn-dark w-100">
-                                Search Properties
-                            </button>
-
+                            <button class="btn btn-dark w-100">Search Properties</button>
                         </form>
-                    </article>
-                </section>
+                    </div>
+                </div>
 
                 <!-- AGENT SEARCH -->
-                <section class="col-12 col-md-6">
-                    <article class="card p-4 shadow">
+                <div class="col-12 col-md-6">
+                    <div class="card p-4 shadow-sm h-100">
 
-                        <h3 class="mb-3">Search Agents</h3>
+                        <h4 class="mb-3">Search Agents</h4>
 
                         <form method="get" asp-page="/Agents/Search">
-
                             <div class="mb-3">
                                 <label>Location</label>
                                 <input class="form-control" name="Location" placeholder="City or Suburb" />
                             </div>
 
-                            <button class="btn btn-outline-dark w-100">
-                                Search Agents
-                            </button>
-
+                            <button class="btn btn-outline-dark w-100">Search Agents</button>
                         </form>
-                    </article>
-                </section>
+                    </div>
+                </div>
 
             </div>
-
         </div>
     </section>
 
-    <!-- ABOUT + HISTORY + STATS -->
-    <section style="background: linear-gradient(135deg, #f5e6c8, #e8d3a8); padding: 60px 20px;">
+    <!-- ABOUT + STATS -->
+    <section style="background: linear-gradient(135deg, #f5e6c8, #e8d3a8);" class="py-5">
 
         <div class="container text-center">
 
-            <!-- TITLE -->
-            <h2 class="fw-bold mb-3" style="letter-spacing: 0.5px;">
-                About OakDevelopments
-            </h2>
+            <h2 class="fw-bold mb-4">About OakDevelopments</h2>
 
-            <!-- STORY -->
             <div class="mx-auto mb-4" style="max-width: 750px;">
                 <p>
                     OakDevelopments was founded with a vision to redefine how people
-                    discover and experience real estate in South Africa.
+                    discover real estate in South Africa.
                 </p>
-
                 <p>
-                    What started as a small digital platform has grown into a trusted
-                    space for buyers, renters, and investors seeking high-quality homes
-                    in Gauteng and beyond.
-                </p>
-
-                <p>
-                    Our mission is simple — to combine technology, design, and
-                    convenience to help you find the perfect place to call home.
+                    We now serve buyers, renters, and investors looking for premium
+                    properties across Gauteng and beyond.
                 </p>
             </div>
 
             <!-- STATS -->
-            <div class="row text-center mt-5">
+            <div class="row mt-5">
 
                 <div class="col-md-3 col-6 mb-4">
-                    <h3 class="fw-bold" style="color:#b8962e;">100+</h3>
-                    <p>Properties Listed</p>
+
+                    <h3 class="fw-bold" style="color:#8b6b1f; font-size:2rem;">
+                        100+
+                    </h3>
+
+                    <p>Properties</p>
                 </div>
 
                 <div class="col-md-3 col-6 mb-4">
-                    <h3 class="fw-bold" style="color:#b8962e;">50+</h3>
-                    <p>Trusted Agents</p>
+
+                    <h3 class="fw-bold" style="color:#8b6b1f; font-size:2rem;">
+                        500+
+                    </h3>
+
+                    <p>Agents</p>
                 </div>
 
                 <div class="col-md-3 col-6 mb-4">
-                    <h3 class="fw-bold" style="color:#b8962e;">1 000+</h3>
-                    <p>Happy Clients</p>
+
+                    <h3 class="fw-bold" style="color:#8b6b1f; font-size:2rem;">
+                        1 000+
+                    </h3>
+
+                    <p>Clients</p>
                 </div>
 
                 <div class="col-md-3 col-6 mb-4">
-                    <h3 class="fw-bold" style="color:#b8962e;">5+</h3>
-                    <p>Years Experience</p>
+
+                    <h3 class="fw-bold" style="color:#8b6b1f; font-size:2rem;">
+                        5+
+                    </h3>
+
+                    <p>Years</p>
                 </div>
 
             </div>
 
         </div>
-
     </section>
+
     <!-- WHY CHOOSE US -->
-    <section class="bg-light container p-4 rounded mb-5">
+    <section class="py-5">
+        <div class="container text-center">
 
-        <h2 class="fw-bold mb-4 text-center">Why Choose Us</h2>
+            <h2 class="fw-bold mb-5">Why Choose Us</h2>
 
-        <div class="row text-center">
+            <div class="row g-4">
 
-            <div class="col-md-4">
-                <h5>🏡 Premium Listings</h5>
-                <p>Curated properties in top locations.</p>
+                <div class="col-md-4">
+                    <h5>🏡 Premium Listings</h5>
+                    <p>Curated properties in top locations.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h5>⚡ Easy Search</h5>
+                    <p>Quick and intuitive property discovery.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h5>🔒 Trusted Platform</h5>
+                    <p>Secure and reliable system.</p>
+                </div>
+
             </div>
 
-            <div class="col-md-4">
-                <h5>⚡ Easy Search</h5>
-                <p>Quick and intuitive property discovery.</p>
-            </div>
+        </div>
+    </section>
 
-            <div class="col-md-4">
-                <h5>🔒 Trusted Platform</h5>
-                <p>Secure and reliable system.</p>
+    <!-- CONTACT -->
+    <section style="background:#121212; color:white;" class="py-5">
+
+        <div class="container">
+
+            <h2 class="text-center mb-5" style="color:#d4af37;">Contact Us</h2>
+
+            <div class="row g-4 align-items-center">
+
+                <!-- CONTACT DETAILS -->
+                <div class="col-md-5">
+                    <h5 class="mb-3">Get in Touch</h5>
+                    <p><strong>Email:</strong> info@oakdevelopments.co.za</p>
+                    <p><strong>Phone:</strong> +27 82 123 4567</p>
+                    <p><strong>Location:</strong> Midrand, Gauteng</p>
+                </div>
+
+                <!-- FORM -->
+                <div class="col-md-7">
+                    <form>
+
+                        <div class="mb-3">
+                            <input class="form-control" placeholder="Your Name" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+                        </div>
+
+                        <button class="btn w-100" style="background:#d4af37; color:black; font-weight:bold;">
+                            Send Message
+                        </button>
+
+                    </form>
+                </div>
+
             </div>
 
         </div>
