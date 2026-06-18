@@ -287,6 +287,21 @@ header {
     }*/
 
 
+
+/*.card {
+    border-radius: 14px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    overflow: hidden;
+}
+
+    .card:hover {
+        transform: translateY(-8px);
+        .btn {
+    border-radius: 8px;
+}
+*/
+
+
 .property-images {
     display: flex;
     gap: 8px;

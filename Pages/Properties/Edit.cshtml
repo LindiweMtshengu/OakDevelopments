@@ -1,0 +1,66 @@
+﻿@page "{id:int}"
+@model OakDevelopments.Pages.Properties.EditModel
+
+<main>
+    <section>
+
+        <h2>Edit Property</h2>
+
+        <form method="post">
+
+            <input type="hidden" asp-for="Property.ID" />
+
+            <div>
+                <label asp-for="Property.Title"></label>
+                <input asp-for="Property.Title" class="form-control" />
+                <span asp-validation-for="Property.Title" class="text-danger"></span>
+            </div>
+
+            <div>
+                <label asp-for="Property.Description"></label>
+                <textarea asp-for="Property.Description" class="form-control"></textarea>
+                <span asp-validation-for="Property.Description" class="text-danger"></span>
+            </div>
+
+            <div>
+                <label asp-for="Property.Price"></label>
+                <input asp-for="Property.Price" type="number" class="form-control" />
+                <span asp-validation-for="Property.Price" class="text-danger"></span>
+            </div>
+
+            <div>
+                <label asp-for="Property.Bedrooms"></label>
+                <input asp-for="Property.Bedrooms" type="number" class="form-control" />
+                <span asp-validation-for="Property.Bedrooms" class="text-danger"></span>
+            </div>
+
+            <div>
+                <label asp-for="Property.Suburb"></label>
+                <input asp-for="Property.Suburb" class="form-control" />
+                <span asp-validation-for="Property.Suburb" class="text-danger"></span>
+            </div>
+
+            <div>
+                <label asp-for="Property.City"></label>
+                <input asp-for="Property.City" class="form-control" />
+                <span asp-validation-for="Property.City" class="text-danger"></span>
+            </div>
+
+            <div>
+                <label asp-for="Property.Province"></label>
+                <input asp-for="Property.Province" class="form-control" />
+                <span asp-validation-for="Property.Province" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-success mt-3">
+                Save Changes
+            </button>
+
+        </form>
+
+    </section>
+</main>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
