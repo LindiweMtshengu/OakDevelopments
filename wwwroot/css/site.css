@@ -22,7 +22,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: var(--light);
+    background-color: #e6eaef;
     color: #2c2c2c;
     line-height: 1.6;
 }
@@ -31,7 +31,15 @@ body {
 main {
     flex: 1;
     padding-bottom: 60px;
+    background: #e6eaef !important;
+    flex: 1;
 }
+
+    main.container {
+        background-color: #e6eaef !important;
+        border-radius: 10px;
+    }
+
 
 h1, h2, h3 {
     letter-spacing: 0.5px;
@@ -229,8 +237,8 @@ header {
 
 .price-label {
     display: block;
-    font-size: 0.75rem;
-    color: #888;
+    font-size: 0.8rem;
+    color: #666;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -239,18 +247,18 @@ header {
     display: block;
     font-size: 1.6rem;
     font-weight: 700;
-    color: #d4af37;
+    color: #a67c00;
     margin-top: 2px;
 }
 
 .search-card,
 .property-card,
 .agent-card {
-    background: white;
+    background: #ffffff;
     border: none;
     border-radius: 12px;
     padding: 1.5rem;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -266,11 +274,17 @@ header {
         color: var(--primary);
     }
 
-    /* PRICE STYLING */
-    .property-card p strong {
-        color: #d4af37; /* luxury gold */
-        font-size: 1.1rem;
+    .property-card .price {
+        color: #a67c00 !important; /* darker gold */
+        font-size: 1.7rem;
+        font-weight: 800;
     }
+
+    /* PRICE STYLING */
+    /*.property-card p strong {
+        color: #d4af37;*/ /* luxury gold */
+        /*font-size: 1.1rem;
+    }*/
 
 
 .property-images {
@@ -572,3 +586,24 @@ legend {
 .property-card footer {
     margin-top: auto;
 }
+
+
+
+.footer {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    background-color: #121212 !important; 
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+    .footer a {
+        color: #d4af37;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }

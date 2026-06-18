@@ -105,7 +105,13 @@
                             </header>
 
                             <p>@property.Description</p>
-                            <p><strong>Price:</strong> R @property.Price</p>
+
+                            <p class="price-row">
+                                <span class="price-label">Price</span>
+                                <span class="price">
+                                    R @property.Price.ToString("N0").Replace(",", " ")
+                                </span>
+                            </p>
                             <p><strong>Bedrooms:</strong> @property.Bedrooms</p>
                             <p><strong>Location:</strong> @property.Suburb, @property.City</p>
 

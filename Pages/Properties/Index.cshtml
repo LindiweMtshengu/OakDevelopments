@@ -54,10 +54,14 @@
                         @property.Suburb, @property.City
                     </p>
 
-                    <p>
-                        <strong>Price:</strong>
-                        R @property.Price.ToString("N0")
+
+                    <p class="price-row">
+                        <span class="price-label">Price</span>
+                        <span class="price">
+                            R @property.Price.ToString("N0").Replace(",", " ")
+                        </span>
                     </p>
+
 
                     <!-- ACTION -->
                     <footer>

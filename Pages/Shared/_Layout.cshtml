@@ -127,19 +127,26 @@
     </header>
 
     <!-- ===== MAIN CONTENT ===== -->
-    <main class="container py-4">
+    <main class="container py-4" style="background: transparent;">
         @RenderBody()
     </main>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="footer border-top mt-5">
-        <div class="container">
-            <p>
-                &copy; 2026 - OakDevelopments |
-                <a asp-page="/Privacy">Privacy</a>
-            </p>
-        </div>
-    </footer>
+    
+<footer class="footer">
+    <div class="container">
+        <p>
+            © 2026 OakDevelopments. All rights reserved.
+        </p>
+        <p>
+            Helping you find your dream property in South Africa.
+        </p>
+        <p>
+            <a asp-page="/Privacy">Privacy Policy</a>
+        </p>
+    </div>
+</footer>
+
 
     <!-- SCRIPTS -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
