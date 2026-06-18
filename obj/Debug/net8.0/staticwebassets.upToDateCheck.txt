@@ -1,4 +1,5 @@
 wwwroot\.gitignore
+wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\images\9bd0deb1-4c55-44db-9b35-ecb3e016577a.png
 wwwroot\images\abcb8573-79de-42b9-b314-6828c001d9e8.png
@@ -81,4 +82,3 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\css\site.css

@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -6,6 +7,7 @@ using OakDevelopments.Models;
 
 namespace OakDevelopments.Pages.Properties
 {
+    [Authorize(Roles = "Admin")]
     public class AddModel : PageModel
     {
         private readonly AppDbContext _context;

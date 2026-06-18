@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OakDevelopments")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78c2f0cb510a5aa86b54099dce710885585a07a8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb1288434df08e9b867b97878cf0627835e6d6f3")]
 [assembly: System.Reflection.AssemblyProductAttribute("OakDevelopments")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OakDevelopments")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

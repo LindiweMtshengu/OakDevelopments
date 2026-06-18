@@ -132,10 +132,39 @@ namespace OakDevelopments.Areas.Identity.Pages.Account
                         protocol: Request.Scheme);
 
                     await _emailSender.SendEmailAsync(
-                            Input.Email,
-                                "Confirm your email",
-                                callbackUrl
-                        );
+                                         Input.Email,
+                                         "Confirm your email",
+                                         $@"
+                                        <h2>Confirm Your Email</h2>
+                                        <p>Welcome to OakDevelopments 🎉</p>
+
+                                        <p>Please confirm your account by clicking the button below:</p>
+
+                                        <p>
+                                            <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'
+                                               style='
+                                                    display:inline-block;
+                                                    padding:12px 20px;
+                                                    background:#d4af37;
+                                                    color:black;
+                                                    text-decoration:none;
+                                                    border-radius:8px;
+                                                    font-weight:bold;
+                                               '>
+                                                Confirm Email
+                                            </a>
+                                        </p>
+
+                                        <p>If the button doesn't work, copy and paste this link into your browser:</p>
+
+                                        <p>{HtmlEncoder.Default.Encode(callbackUrl)}</p>
+
+                                        <p style='color:#666; font-size:12px;'>
+                                            If you did not create an account, you can safely ignore this email.
+                                        </p>
+                                        "
+                                     );
+
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {
