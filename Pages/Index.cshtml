@@ -6,19 +6,15 @@
 
 <main>
 
-    <!-- HERO SECTION -->
-    <section class="hero" aria-labelledby="hero-heading">
-        <div class="container">
-
-            <header class="hero-content text-center">
-                <h1 id="hero-heading">Find Your Dream Home</h1>
-                <p>Luxury living starts here...</p>
-            </header>
-
+    <!-- HERO FIRST -->
+    <section class="hero text-center text-white">
+        <div class="hero-content">
+            <h1>Find Your Dream Home</h1>
+            <p>Luxury living starts here...</p>
         </div>
     </section>
 
-    <!-- SEARCH SECTION -->
+    <!-- SEARCH -->
     <section class="search-section mt-5" aria-labelledby="search-heading">
         <div class="container">
 
@@ -31,31 +27,26 @@
             <div class="row">
 
                 <!-- PROPERTY SEARCH -->
-                <section class="col-12 col-md-6" aria-labelledby="property-search-heading">
-
+                <section class="col-12 col-md-6">
                     <article class="card p-4 shadow">
 
-                        <header>
-                            <h3 id="property-search-heading" class="mb-3">
-                                Search Properties
-                            </h3>
-                        </header>
+                        <h3 class="mb-3">Search Properties</h3>
 
                         <form method="get" asp-page="/Properties/Search">
 
                             <div class="mb-3">
-                                <label for="location">Location</label>
-                                <input id="location" class="form-control" name="Location" placeholder="City or Suburb" />
+                                <label>Location</label>
+                                <input class="form-control" name="Location" placeholder="City or Suburb" />
                             </div>
 
                             <div class="mb-3">
-                                <label for="minPrice">Min Price</label>
-                                <input id="minPrice" class="form-control" name="MinPrice" type="number" />
+                                <label>Min Price</label>
+                                <input class="form-control" name="MinPrice" type="number" />
                             </div>
 
                             <div class="mb-3">
-                                <label for="maxPrice">Max Price</label>
-                                <input id="maxPrice" class="form-control" name="MaxPrice" type="number" />
+                                <label>Max Price</label>
+                                <input class="form-control" name="MaxPrice" type="number" />
                             </div>
 
                             <button class="btn btn-dark w-100">
@@ -63,27 +54,20 @@
                             </button>
 
                         </form>
-
                     </article>
-
                 </section>
 
                 <!-- AGENT SEARCH -->
-                <section class="col-12 col-md-6" aria-labelledby="agent-search-heading">
-
+                <section class="col-12 col-md-6">
                     <article class="card p-4 shadow">
 
-                        <header>
-                            <h3 id="agent-search-heading" class="mb-3">
-                                Search Agents
-                            </h3>
-                        </header>
+                        <h3 class="mb-3">Search Agents</h3>
 
                         <form method="get" asp-page="/Agents/Search">
 
                             <div class="mb-3">
-                                <label for="agentLocation">Location</label>
-                                <input id="agentLocation" class="form-control" name="Location" placeholder="City or Suburb" />
+                                <label>Location</label>
+                                <input class="form-control" name="Location" placeholder="City or Suburb" />
                             </div>
 
                             <button class="btn btn-outline-dark w-100">
@@ -91,14 +75,95 @@
                             </button>
 
                         </form>
-
                     </article>
-
                 </section>
 
             </div>
 
         </div>
+    </section>
+
+    <!-- ABOUT + HISTORY + STATS -->
+    <section style="background: linear-gradient(135deg, #f5e6c8, #e8d3a8); padding: 60px 20px;">
+
+        <div class="container text-center">
+
+            <!-- TITLE -->
+            <h2 class="fw-bold mb-3" style="letter-spacing: 0.5px;">
+                About OakDevelopments
+            </h2>
+
+            <!-- STORY -->
+            <div class="mx-auto mb-4" style="max-width: 750px;">
+                <p>
+                    OakDevelopments was founded with a vision to redefine how people
+                    discover and experience real estate in South Africa.
+                </p>
+
+                <p>
+                    What started as a small digital platform has grown into a trusted
+                    space for buyers, renters, and investors seeking high-quality homes
+                    in Gauteng and beyond.
+                </p>
+
+                <p>
+                    Our mission is simple — to combine technology, design, and
+                    convenience to help you find the perfect place to call home.
+                </p>
+            </div>
+
+            <!-- STATS -->
+            <div class="row text-center mt-5">
+
+                <div class="col-md-3 col-6 mb-4">
+                    <h3 class="fw-bold" style="color:#b8962e;">100+</h3>
+                    <p>Properties Listed</p>
+                </div>
+
+                <div class="col-md-3 col-6 mb-4">
+                    <h3 class="fw-bold" style="color:#b8962e;">50+</h3>
+                    <p>Trusted Agents</p>
+                </div>
+
+                <div class="col-md-3 col-6 mb-4">
+                    <h3 class="fw-bold" style="color:#b8962e;">1 000+</h3>
+                    <p>Happy Clients</p>
+                </div>
+
+                <div class="col-md-3 col-6 mb-4">
+                    <h3 class="fw-bold" style="color:#b8962e;">5+</h3>
+                    <p>Years Experience</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- WHY CHOOSE US -->
+    <section class="bg-light container p-4 rounded mb-5">
+
+        <h2 class="fw-bold mb-4 text-center">Why Choose Us</h2>
+
+        <div class="row text-center">
+
+            <div class="col-md-4">
+                <h5>🏡 Premium Listings</h5>
+                <p>Curated properties in top locations.</p>
+            </div>
+
+            <div class="col-md-4">
+                <h5>⚡ Easy Search</h5>
+                <p>Quick and intuitive property discovery.</p>
+            </div>
+
+            <div class="col-md-4">
+                <h5>🔒 Trusted Platform</h5>
+                <p>Secure and reliable system.</p>
+            </div>
+
+        </div>
+
     </section>
 
 </main>
