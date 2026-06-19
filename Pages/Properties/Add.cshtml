@@ -76,6 +76,22 @@
                     }
                 </select>
             </div>
+            
+            <div class="mb-3">
+                <label>Status</label>
+                <select asp-for="Property.StatusID"
+                        asp-items="Model.StatusList"
+                        class="form-control">
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label>Amenities</label>
+
+                <input asp-for="Property.Amenities"
+                       class="form-control"
+                       placeholder="e.g. Pool, Gym, Parking, Security" />
+            </div>
 
 
             <!-- IMAGE UPLOAD -->

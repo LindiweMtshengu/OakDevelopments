@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using OakDevelopments.Data;
 using OakDevelopments.Models;
 using System.Reflection;
@@ -22,10 +23,13 @@ namespace OakDevelopments.Pages.Properties
 
         public List<Agent> Agents { get; set; }
 
+        public SelectList StatusList { get; set; }
+
         public async Task<IActionResult> OnGetAsync(int id)
         {
             Property = await _context.Properties.FindAsync(id);
             Agents = _context.Agents.ToList();
+            StatusList = new SelectList(_context.PropertyStatuses, "ID", "StatusName");
 
             if (Property == null)
                 return RedirectToPage("/Properties/Manage");
@@ -53,6 +57,8 @@ namespace OakDevelopments.Pages.Properties
             existingProperty.City = Property.City;
             existingProperty.Province = Property.Province;
             existingProperty.AgentID = Property.AgentID;
+            existingProperty.StatusID = Property.StatusID;
+            existingProperty.Amenities = Property.Amenities;
 
             await _context.SaveChangesAsync();
 

@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using OakDevelopments.Data;
 using OakDevelopments.Models;
 
@@ -25,9 +26,12 @@ namespace OakDevelopments.Pages.Properties
         [BindProperty]
         public List<IFormFile> Images { get; set; }
 
+        public SelectList StatusList { get; set; }
+
         public void OnGet()
         {
             Agents = _context.Agents.ToList();
+            StatusList = new SelectList(_context.PropertyStatuses, "ID", "StatusName");
         }
 
         public async Task<IActionResult> OnPostAsync()
@@ -40,9 +44,9 @@ namespace OakDevelopments.Pages.Properties
             }
 
             // AUTO ASSIGN REQUIRED FIELDS 
-            Property.AgentID = 1;
-            Property.PropertyTypeID = 1;
-            Property.StatusID = 1;
+            //Property.AgentID = 1;
+            //Property.PropertyTypeID = 1;
+            //Property.StatusID = 1;
 
             // Validate images
             if (Images == null || Images.Count < 4)

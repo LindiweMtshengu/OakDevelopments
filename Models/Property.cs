@@ -41,6 +41,8 @@ namespace OakDevelopments.Models
         public int StatusID { get; set; }
         public PropertyStatus? Status { get; set; }
 
+        public string? Amenities { get; set; }
+
         // Navigation
         public List<PropertyImage>? Images { get; set; }
     }

@@ -44,6 +44,31 @@
         </span>
 
     </p>
+    
+    <p>
+        <strong>Status:</strong>
+
+        <span class="badge @(Model.Property.StatusID == 1 ? "bg-success" : "bg-danger")">
+            @Model.Property.Status?.StatusName
+        </span>
+    </p>
+
+
+    @if (!string.IsNullOrEmpty(Model.Property.Amenities))
+    {
+        <div class="mt-3">
+            <strong>Amenities:</strong><br />
+
+            @foreach (var item in Model.Property.Amenities.Split(','))
+            {
+                <span class="badge bg-secondary me-1 mb-1">
+                    @item.Trim()
+                </span>
+            }
+        </div>
+    }
+
+
 
     <p><strong>Bedrooms:</strong> @Model.Property.Bedrooms</p>
 
