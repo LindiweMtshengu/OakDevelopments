@@ -127,14 +127,27 @@ header {
 ================================ */
 
 .hero {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('/images/luxury-house.jpg');
+    background-image: url('/images/bck.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
     text-align: center;
     padding: 5rem 2rem;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
+
+    .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.2);
+    }
 
 
 .hero-content {
@@ -142,10 +155,16 @@ header {
     margin: auto;
 }
 
+    .hero-content h1 {
+        color: #ffffff;
+        opacity: 1; 
+    }
+
 .hero h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    font-weight: 600;
 }
 
 .hero p {
@@ -539,7 +558,7 @@ legend {
 }
 
 /* ================================
-   FILTER BAR (COMPACT LUXURY)
+   FILTER BAR 
 ================================ */
 .filter-bar {
     display: flex;
@@ -668,3 +687,46 @@ legend {
         .footer a:hover {
             text-decoration: underline;
         }
+
+/* ================================
+   PRIVACY POLICY & TERMS
+================================ */
+
+
+.privacy-section {
+    background: #f8f9fa;
+}
+
+.privacy-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 800px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+    /* HEADINGS */
+    .privacy-card h1 {
+        font-weight: 600;
+        color: #000;
+    }
+
+    .privacy-card h4 {
+        margin-top: 25px;
+        color: #d4af37; /* gold accent */
+    }
+
+    /* TEXT */
+    .privacy-card p {
+        color: #444;
+    }
+
+    .privacy-card ul {
+        padding-left: 20px;
+    }
+
+    /* DIVIDERS */
+    .privacy-card hr {
+        margin: 20px 0;
+        border-top: 1px solid #eee;
+    }
