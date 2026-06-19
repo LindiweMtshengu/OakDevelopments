@@ -71,7 +71,6 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-// ADD THESE (CRITICAL FOR LOGIN)
 app.UseAuthentication();  
 app.UseAuthorization();    
 

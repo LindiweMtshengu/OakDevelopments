@@ -1,4 +1,5 @@
 wwwroot\.gitignore
+wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\images\8be701e1-03fd-45fc-bbf6-724abe97f32c.png
 wwwroot\images\90dd0d4c-8254-4b58-8d4f-69bb683f35a6.png
@@ -6,9 +7,11 @@ wwwroot\images\9bd0deb1-4c55-44db-9b35-ecb3e016577a.png
 wwwroot\images\abcb8573-79de-42b9-b314-6828c001d9e8.png
 wwwroot\images\amahle.png
 wwwroot\images\andile.png
+wwwroot\images\background.png
 wwwroot\images\balcony-2.png
 wwwroot\images\balcony.png
 wwwroot\images\bathroom .png
+wwwroot\images\bck.png
 wwwroot\images\bedroom-1.png
 wwwroot\images\bedroom-1806.png
 wwwroot\images\bedroom-4.png
@@ -95,4 +98,3 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\css\site.css

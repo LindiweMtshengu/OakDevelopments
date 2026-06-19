@@ -1,0 +1,60 @@
+﻿@page
+@model ManageUsersModel
+
+<h2 class="text-center">Manage Users</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success text-center">
+        @TempData["Success"]
+    </div>
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var user in Model.Users)
+        {
+            <tr>
+                <td>@user.Email</td>
+                <td>
+                    @if (user.IsAdmin)
+                    {
+                        <span class="badge bg-success">Admin</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-secondary">User</span>
+                    }
+                </td>
+                <td>
+                    @if (!user.IsAdmin)
+                    {
+                        <form method="post" asp-page-handler="MakeAdmin">
+                            <input type="hidden" name="userId" value="@user.Id" />
+                            <button type="submit" class="btn btn-sm btn-primary">
+                                Make Admin
+                            </button>
+                        </form>
+                    }
+                    else
+                    {
+                        <form method="post" asp-page-handler="RemoveAdmin">
+                            <input type="hidden" name="userId" value="@user.Id" />
+                            <button type="submit" class="btn btn-sm btn-danger">
+                                Remove Admin
+                            </button>
+                        </form>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
