@@ -18,6 +18,12 @@ public class DetailsModel : PageModel
 
     public Property ? Property { get; set; }
 
+    [BindProperty]
+    public decimal MonthlyPayment
+    {
+        get; set;
+    }
+
     public void OnGet(int id)
     {
         Property = _context.Properties
@@ -40,5 +46,27 @@ public class DetailsModel : PageModel
         // User is logged in ? go to booking page
         return RedirectToPage("/Bookings/Create", new { propertyId = propertyId });
     }
+
+    public IActionResult OnPostCalculateMortgage(decimal price, decimal deposit, double interestRate, int years)
+    {
+        double loanAmount = (double)(price - deposit);
+
+        double monthlyRate = (interestRate / 100) / 12;
+        double numberOfPayments = years * 12;
+
+        if (monthlyRate > 0)
+        {
+            MonthlyPayment = (decimal)(
+                loanAmount * monthlyRate /
+                (1 - Math.Pow(1 + monthlyRate, -numberOfPayments))
+            );
+        }
+
+        TempData["MortgageResult"] = $"Estimated Monthly Payment: R {MonthlyPayment:F2}";
+
+        return RedirectToPage(new { id = RouteData.Values["id"] });
+    }
+
+
 
 }

@@ -1,6 +1,8 @@
 wwwroot\.gitignore
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\6be335e7-bd1b-489a-a2fd-d78a67baa591.png
+wwwroot\images\844e27d1-4d3a-43a0-8e87-e08236c83b93.png
 wwwroot\images\8be701e1-03fd-45fc-bbf6-724abe97f32c.png
 wwwroot\images\90dd0d4c-8254-4b58-8d4f-69bb683f35a6.png
 wwwroot\images\9bd0deb1-4c55-44db-9b35-ecb3e016577a.png
@@ -17,7 +19,9 @@ wwwroot\images\bedroom-1806.png
 wwwroot\images\bedroom-4.png
 wwwroot\images\bedrrom-3.png
 wwwroot\images\caa5d581-1732-4905-b8c6-a8f7b7f050f1.png
+wwwroot\images\d4d2e7bd-6a7e-4d42-ac6b-cfd15ca7a78a.png
 wwwroot\images\de76bab7-6afa-4f2a-84b7-8bd059f14230.png
+wwwroot\images\e96ac3ba-0e63-420c-b3db-a61250215762.png
 wwwroot\images\entrance.png
 wwwroot\images\f8c6d790-ca6a-45eb-870d-ae600889c472.png
 wwwroot\images\fc3ca758-98a6-4b2c-b107-1e5a96edcb56.png
