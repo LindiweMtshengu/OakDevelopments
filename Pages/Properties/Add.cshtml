@@ -61,6 +61,22 @@
                     <span asp-validation-for="Property.Province" class="text-danger"></span>
                 </div>
             </fieldset>
+            <div class="mb-3">
+                <label class="form-label">Agent</label>
+
+                <select asp-for="Property.AgentID" class="form-control">
+
+                    <option value="">-- Select Agent --</option>
+
+                    @foreach (var agent in Model.Agents)
+                    {
+                        <option value="@agent.ID">
+                            @agent.FirstName @agent.LastName
+                        </option>
+                    }
+                </select>
+            </div>
+
 
             <!-- IMAGE UPLOAD -->
             <fieldset>

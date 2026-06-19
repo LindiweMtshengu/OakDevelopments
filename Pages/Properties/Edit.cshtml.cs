@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using OakDevelopments.Data;
 using OakDevelopments.Models;
+using System.Reflection;
 
 namespace OakDevelopments.Pages.Properties
 {
@@ -19,9 +20,12 @@ namespace OakDevelopments.Pages.Properties
         [BindProperty]
         public Property Property { get; set; }
 
+        public List<Agent> Agents { get; set; }
+
         public async Task<IActionResult> OnGetAsync(int id)
         {
             Property = await _context.Properties.FindAsync(id);
+            Agents = _context.Agents.ToList();
 
             if (Property == null)
                 return RedirectToPage("/Properties/Manage");
@@ -31,6 +35,8 @@ namespace OakDevelopments.Pages.Properties
 
         public async Task<IActionResult> OnPostAsync()
         {
+            Agents = _context.Agents.ToList();
+
             if (!ModelState.IsValid)
                 return Page();
 
@@ -46,6 +52,7 @@ namespace OakDevelopments.Pages.Properties
             existingProperty.Suburb = Property.Suburb;
             existingProperty.City = Property.City;
             existingProperty.Province = Property.Province;
+            existingProperty.AgentID = Property.AgentID;
 
             await _context.SaveChangesAsync();
 

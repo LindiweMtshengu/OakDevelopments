@@ -20,6 +20,7 @@ public class DetailsModel : PageModel
     {
         Property = _context.Properties
             .Include(p => p.Images)
+            .Include(p => p.Agent)
             .FirstOrDefault(p => p.ID == id);
     }
 }

@@ -56,4 +56,42 @@
 
     </div>
 
+    <hr />
+
+    <h4>Agent Information</h4>
+
+
+    @if (Model.Property.Agent != null)
+    {
+        <div class="d-flex align-items-center gap-3 mt-3">
+
+            <!-- IMAGE GOES HERE -->
+            @if (!string.IsNullOrEmpty(Model.Property.Agent.ProfilePhoto))
+            {
+                <img src="~/images/@Model.Property.Agent.ProfilePhoto"
+                     class="img-fluid rounded"
+                     style="width:120px; height:120px; object-fit:cover;" />
+            }
+            else
+            {
+                <img src="~/images/default.jpg"
+                     class="img-fluid rounded"
+                     style="width:120px; height:120px;" />
+            }
+
+            <!-- TEXT DETAILS -->
+            <div>
+                <h5>@Model.Property.Agent.FirstName @Model.Property.Agent.LastName</h5>
+                <p>@Model.Property.Agent.Email</p>
+                <p>@Model.Property.Agent.Phone</p>
+            </div>
+
+        </div>
+    }
+    else
+    {
+        <p>No agent assigned to this property.</p>
+    }
+
+
 </main>

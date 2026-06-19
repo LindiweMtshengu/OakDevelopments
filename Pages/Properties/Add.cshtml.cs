@@ -20,15 +20,20 @@ namespace OakDevelopments.Pages.Properties
         [BindProperty]
         public Property Property { get; set; } = new Property();
 
+        public List<Agent> Agents { get; set; }
+
         [BindProperty]
         public List<IFormFile> Images { get; set; }
 
         public void OnGet()
         {
+            Agents = _context.Agents.ToList();
         }
 
         public async Task<IActionResult> OnPostAsync()
         {
+            Agents = _context.Agents.ToList();
+
             if (!ModelState.IsValid)
             {
                 return Page();
