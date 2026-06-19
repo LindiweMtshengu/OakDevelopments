@@ -3,6 +3,13 @@
 
 <main class="container">
 
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger text-center">
+            @TempData["Error"]
+        </div>
+    }
+
     <h2>@Model.Property.Title</h2>
 
 
@@ -97,12 +104,13 @@
 
     <div class="text-center mt-4">
 
-        <a asp-page="/Bookings/Create"
-           asp-route-propertyId="@Model.Property.ID"
-           class="btn btn-warning">
+        <form method="post" asp-page-handler="BookViewing">
+            <input type="hidden" name="propertyId" value="@Model.Property.ID" />
 
-            Book Viewing
-        </a>
+            <button type="submit" class="btn btn-warning">
+                Book Viewing
+            </button>
+        </form>
 
     </div>
 
