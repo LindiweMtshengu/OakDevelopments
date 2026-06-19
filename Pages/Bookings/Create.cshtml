@@ -1,0 +1,39 @@
+﻿@page
+@model OakDevelopments.Pages.Bookings.CreateModel
+@{
+}
+
+<h2>Book Viewing</h2>
+<div asp-validation-summary="All" class="text-danger"></div>
+
+
+<p class="text-muted text-center">
+    Booking for Property ID: @Model.Booking.PropertyId
+</p>
+
+<form method="post">
+
+    <input type="hidden" asp-for="Booking.PropertyId" />
+
+    <div class="mb-3">
+        <input asp-for="Booking.Name" class="form-control" placeholder="Your Name" />
+    </div>
+
+    <div class="mb-3">
+        <input asp-for="Booking.Email" class="form-control" placeholder="Your Email" />
+    </div>
+
+    <div class="mb-3">
+
+
+        <input asp-for="Booking.RequestedDate"
+               type="datetime-local"
+               class="form-control"
+               value="@Model.Booking.RequestedDate.ToString("yyyy-MM-ddTHH:mm")" />
+
+
+    </div>
+
+    <button class="btn btn-dark w-100">Submit Booking</button>
+
+</form>

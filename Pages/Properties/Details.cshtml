@@ -93,5 +93,17 @@
         <p>No agent assigned to this property.</p>
     }
 
+    <hr />
+
+    <div class="text-center mt-4">
+
+        <a asp-page="/Bookings/Create"
+           asp-route-propertyId="@Model.Property.ID"
+           class="btn btn-warning">
+
+            Book Viewing
+        </a>
+
+    </div>
 
 </main>

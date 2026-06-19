@@ -490,6 +490,52 @@ legend {
         grid-template-rows: none;
     }
 
+    .d-flex.flex-wrap .btn {
+        width: 100%;
+    }
+
+
+    table {
+        border: none;
+    }
+
+        table thead {
+            display: none; /* hide headers */
+        }
+
+        table, table tbody, table tr, table td {
+            display: block;
+            width: 100%;
+        }
+
+            table tr {
+                margin-bottom: 15px;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                padding: 10px;
+                background: #fff;
+            }
+
+            table td {
+                text-align: left;
+                padding: 6px 10px;
+                border: none;
+            }
+
+                /* Label each field */
+                table td::before {
+                    content: attr(data-label);
+                    font-weight: bold;
+                    display: block;
+                    color: #888;
+                }
+
+    /* Buttons full width */
+    .action-buttons button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
 }
 
 /* ================================

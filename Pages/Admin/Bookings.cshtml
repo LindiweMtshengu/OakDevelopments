@@ -1,0 +1,76 @@
+﻿@page
+@model BookingsModel
+
+<h2 class="mt-3">Bookings</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success text-center">
+        @TempData["Success"]
+    </div>
+}
+
+<table class="table">
+
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var b in Model.Bookings)
+        {
+            <tr>
+
+                <td data-label="Property">@b.Property.Title</td>
+                <td data-label="Name">@b.Name</td>
+                <td data-label="Email">@b.Email</td>
+                <td data-label="Date">@b.RequestedDate.ToString("yyyy-MM-dd HH:mm")</td>
+                <td data-label="Status">@b.Status</td>
+
+                <td data-label="Actions">
+
+                    <form method="post">
+
+                        <input type="hidden" name="BookingId" value="@b.ID" />
+
+                        <!-- COMMENT -->
+                        <textarea name="Comment"
+                              class="form-control mb-2"
+                              placeholder="Add comment (optional)"></textarea>
+
+                        <!-- BUTTONS -->
+                        <div class="action-buttons">
+
+                            <button name="Action" value="Approved"
+                                    class="btn btn-success btn-sm">
+                                Approve
+                            </button>
+
+                            <button name="Action" value="Declined"
+                                    class="btn btn-danger btn-sm">
+                                Decline
+                            </button>
+
+                            <button name="Action" value="Rescheduled"
+                                    class="btn btn-warning btn-sm">
+                                Reschedule
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </td>
+
+            </tr>
+        }
+    </tbody>
+
+</table>

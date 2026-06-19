@@ -18,6 +18,7 @@ namespace OakDevelopments.Data
         public DbSet<PropertyImage> PropertyImages { get; set; }
         public DbSet<CompanyInfo> CompanyInfos { get; set; }
 
+        public DbSet<Booking> Bookings { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)

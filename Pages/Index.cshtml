@@ -5,6 +5,13 @@
 }
 
 <main>
+    
+@if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success text-center mt-4 shadow-sm">
+            @TempData["Success"]
+        </div>
+    }
 
     <!-- HERO -->
     <section class="hero text-center text-white">
